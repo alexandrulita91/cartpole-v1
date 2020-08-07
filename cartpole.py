@@ -33,15 +33,15 @@ if __name__ == "__main__":
         # Resets the environment
         observation = env.reset()
 
-        # Gets the current state
-        current_state = np.reshape(observation, [1, state_size])
+        # Gets the state
+        state = np.reshape(observation, [1, state_size])
 
         for episode_step in range(num_episode_steps):
             # Renders the screen after new environment observation
             env.render(mode="human")
 
             # Gets a new action
-            action = brain.act(current_state)
+            action = brain.act(state)
 
             # Takes action and calculates the total reward
             observation, reward, done, _ = env.step(action)
@@ -52,10 +52,10 @@ if __name__ == "__main__":
             next_state = np.reshape(observation, [1, state_size])
 
             # Memorizes the experience
-            brain.memorize(current_state, action, reward, next_state, done)
+            brain.memorize(state, action, reward, next_state, done)
 
-            # Updates the current state
-            current_state = next_state
+            # Updates the state
+            state = next_state
 
             if done:
                 print("Episode %d/%d finished after %d episode steps with total reward = %f."
