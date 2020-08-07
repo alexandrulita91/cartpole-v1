@@ -7,6 +7,7 @@ from brain import Brain
 
 if __name__ == "__main__":
     recording_is_enabled = True
+
     env = gym.make('CartPole-v1')
 
     if recording_is_enabled:
