@@ -1,5 +1,5 @@
 # Cart Pole
-Learn how to use Deep Q-Learning  to solve the Cart Pole game.
+Learn how to use Deep Q-learning  to solve the Cart Pole game.
 
 ## Requirements
 First of all, you need Python **3.6** or **3.7** to run the script. After this, install the required packages using pipenv.
