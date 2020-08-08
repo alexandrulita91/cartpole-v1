@@ -59,12 +59,12 @@ if __name__ == "__main__":
 
             if done:
                 print("Episode %d/%d finished after %d episode steps with total reward = %f."
-                      % (episode, num_episodes, episode_step, total_reward))
+                      % (episode + 1, num_episodes, episode_step + 1, total_reward))
                 break
 
             elif episode_step >= num_episode_steps - 1:
                 print("Episode %d/%d timed out at %d with total reward = %f."
-                      % (episode, num_episodes, episode_step, total_reward))
+                      % (episode + 1, num_episodes, episode_step + 1, total_reward))
 
             if len(brain.memory) > batch_size:
                 brain.replay(batch_size)
