@@ -69,5 +69,8 @@ if __name__ == "__main__":
             if len(brain.memory) > batch_size:
                 brain.replay(batch_size)
 
+        # Stores memory on disk
+        brain.save("cartpole.h5")
+
     # Closes the environment
     env.close()
