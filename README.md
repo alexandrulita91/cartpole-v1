@@ -1,5 +1,5 @@
 # Cart Pole
-Learn how to use Deep Q-Learning to solve the CartPole game.
+Learn how to use Deep Q-Learning (DQN) to solve the OpenAI Gym CartPole.
 
 ## Requirements
 First of all, you need Python **3.6** or **3.7** to run the script. After this, install the required packages using pipenv.
