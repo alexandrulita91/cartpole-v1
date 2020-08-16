@@ -21,6 +21,9 @@ A deep Q network (DQN) (Mnih et al., 2013) is an extension of Q learning, which 
 You can run the script using the following command: 
 - `pipenv run python dqn_cartpole.py`
 
+## Demo video
+https://www.youtube.com/watch?v=YB9S74k3yhc
+
 ## Improvement ideas
 - improve the code quality
 - remove unnecessary comments
