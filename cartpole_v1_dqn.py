@@ -62,8 +62,7 @@ class Agent:
             verbose=0
         )
 
-        if self.epsilon > self.epsilon_min:
-            self.epsilon *= self.epsilon_decay
+        self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
 
     def load_weights(self, weights_file):
         self.epsilon = self.epsilon_min
