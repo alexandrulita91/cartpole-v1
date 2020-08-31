@@ -4,6 +4,12 @@ A pole is attached by an un-actuated joint to a cart, which moves along a fricti
 ## OpenAI Gym
 OpenAI Gym is a toolkit for developing and comparing reinforcement learning algorithms. It supports teaching agents everything from walking to playing games like pong or pinball. Gym is an open source interface to reinforcement learning tasks.
 
+## Reinforcement learning algorithms
+- Deep Q-Network (DQN) (off-policy, model-free)
+
+## Demo video
+https://www.youtube.com/watch?v=YB9S74k3yhc
+
 ## Requirements
 - [Python 3.6 or 3.7](https://www.python.org/downloads/release/python-360/)
 - [CUDA Toolkit 10.1](https://developer.nvidia.com/cuda-10.1-download-archive-base)
@@ -14,15 +20,9 @@ OpenAI Gym is a toolkit for developing and comparing reinforcement learning algo
 You can install the required Python packages using the following command:
 - `pipenv sync`
 
-## Reinforcement learning algorithms
-- Deep Q-learning with Experience Replay (off-policy, model-free)
-
 ## How to run it
 You can run the script using the following command: 
 - `pipenv run python cartpole_v1_dqn.py`
-
-## Demo video
-https://www.youtube.com/watch?v=YB9S74k3yhc
 
 ## Improvement ideas
 - improve the code quality
