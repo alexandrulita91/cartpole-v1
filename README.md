@@ -14,8 +14,8 @@ OpenAI Gym is a toolkit for developing and comparing reinforcement learning algo
 You can install the required Python packages using the following command:
 - `pipenv sync`
 
-## Deep Q-learning with Experience Replay
-A deep Q network (DQN) (Mnih et al., 2013) is an extension of Q learning, which is a typical deep reinforcement learning method. In DQN, a Q function expresses all action values under all states, and it is approximated using a convolutional neural network. Using the approximated Q function, an optimal policy can be derived. In DQN, a target network, which calculates a target value and is updated by the Q function at regular intervals, is introduced to stabilize the learning process. In DQN, learning is stabilized through a heuristic called experience replay (Lin, 1993) and the use of a target network. Experience replay is a technique that saves time-series data in a buffer called replay memory.
+## Reinforcement learning algorithms
+- Deep Q-learning with Experience Replay (off-policy, model-free)
 
 ## How to run it
 You can run the script using the following command: 
