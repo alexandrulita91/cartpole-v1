@@ -142,7 +142,7 @@ if __name__ == "__main__":
             # Updates the state
             state = next_state
 
-            # Updates network weights
+            # Updates the network weights
             agent.experience_replay()
 
             if done:
@@ -156,9 +156,6 @@ if __name__ == "__main__":
 
         # Saves the weights
         agent.save_weights("cartpole-v1.h5")
-
-        if total_reward == 500:
-            break
 
     # Closes the environment
     env.close()
