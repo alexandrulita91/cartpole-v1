@@ -13,7 +13,7 @@ from keras.optimizers import Adam
 
 
 class Agent:
-    def __init__(self, state_size, action_size, batch_size=32, memory_size=100000):
+    def __init__(self, state_size, action_size, batch_size=32, memory_size=50000):
         self.state_size = state_size
         self.action_size = action_size
         self.batch_size = batch_size
@@ -22,7 +22,7 @@ class Agent:
         self.epsilon = 1.0  # exploration rate
         self.epsilon_min = 0.01
         self.epsilon_decay = 0.995
-        self.learning_rate = 0.001
+        self.learning_rate = 0.0005
         self.model = self._build_model()
 
     def _build_model(self):
@@ -89,7 +89,7 @@ class Agent:
 
 if __name__ == "__main__":
     # Flag used to enable or disable screen recording
-    recording_is_enabled = True
+    recording_is_enabled = False
 
     # Initializes the environment
     env = gym.make('CartPole-v1')
@@ -154,7 +154,7 @@ if __name__ == "__main__":
                 print("Episode %d/%d timed out at %d with total reward = %f."
                       % (episode + 1, num_episodes, episode_step + 1, total_reward))
 
-        # Saves the weights
+        # Saves the network weights
         agent.save_weights("cartpole-v1.h5")
 
     # Closes the environment
