@@ -46,7 +46,7 @@ class Agent:
         if len(self.memory) < self.batch_size:
             return
 
-        # Randomly sample a batch from the memory
+        # Samples a batch from the memory
         random_batch = random.sample(self.memory, self.batch_size)
 
         state = np.zeros((self.batch_size, self.state_size))
@@ -60,7 +60,7 @@ class Agent:
             next_state[i] = random_batch[i][3]
             done.append(random_batch[i][4])
 
-        # Batch prediction to save speed
+        # Batch prediction to save compute costs
         target = self.model.predict(state)
         target_next = self.model(next_state)
 
@@ -104,7 +104,7 @@ if __name__ == "__main__":
     action_size = env.action_space.n
     state_size = env.observation_space.shape[0]
 
-    # Creates an agent
+    # Creates the agent
     agent = Agent(state_size=state_size, action_size=action_size)
 
     # Loads the weights
