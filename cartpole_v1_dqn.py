@@ -43,7 +43,8 @@ class Agent:
             return np.argmax(self.model.predict(state)[0])
 
     def experience_replay(self):
-        if len(self.memory) < self.batch_size:
+        # Updates the network weights after enough data is collected
+        if self.batch_size >= len(self.memory):
             return
 
         # Samples a batch from the memory
