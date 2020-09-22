@@ -1,5 +1,5 @@
 """
-CartPole-v1 -- Deep Q-learning with Experience Replay
+CartPole-v1 -- Deep Q-learning
 """
 import os
 import random
